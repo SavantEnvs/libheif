@@ -1,0 +1,10 @@
+project: savantenvs/libheif
+target: box-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/box-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/box-fuzzer
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/box-fuzzer/box-fuzzer.dict

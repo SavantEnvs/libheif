@@ -1,0 +1,9 @@
+project: savantenvs/libheif
+target: api-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/api-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/api-fuzzer
+    libfuzzer: true
+    timeout: 5

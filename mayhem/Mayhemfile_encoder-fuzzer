@@ -1,0 +1,6 @@
+project: savantenvs/libheif
+target: encoder-fuzzer
+cmds:
+  - cmd: /mayhem/encoder-fuzzer
+    libfuzzer: true
+    timeout: 5

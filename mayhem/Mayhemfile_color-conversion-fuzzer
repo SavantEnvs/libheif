@@ -1,0 +1,9 @@
+project: savantenvs/libheif
+target: color-conversion-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/color-conversion-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/color-conversion-fuzzer
+    libfuzzer: true
+    timeout: 5
